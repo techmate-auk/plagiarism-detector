@@ -93,7 +93,7 @@ func main() {
 		}
 
 		// Save the uploaded file temporarily
-		tempFilePath := "./uploads/" + file.Filename
+		tempFilePath := "./upload/" + file.Filename
 		err = c.SaveUploadedFile(file, tempFilePath)
 		if err != nil {
 			c.JSON(500, gin.H{"error": "Failed to save uploaded file"})
