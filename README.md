@@ -1,6 +1,6 @@
 # Project Title
 
-A brief description of your project.
+Plagiarim Detector will help you to detect copy content of your manuscript or document.
 
 ## Table of Contents
 - [Features](#features)
@@ -10,9 +10,9 @@ A brief description of your project.
 - [License](#license)
 
 ## Features
-- Feature 1
-- Feature 2
-- Feature 3
+- Easy to use and generate report with source of copy content
+- AI enabled Plagiarim Detector
+- Remove Plagiarism with enabled Paraphrasing Tool
 
 ## Installation
 1. Clone the repository:
