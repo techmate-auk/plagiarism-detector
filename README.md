@@ -30,3 +30,15 @@ Plagiarim Detector will help you to detect copy content of your manuscript or do
 4. Open browser
     ```text
     http://localhost:8080
+
+## Using Docker file
+
+### We used Podman as a container runtime platform
+ 
+ 1. Build image for plagiarism detector
+    ```bash
+    podman build -t plagiarim:v1 .
+
+2. Run the image using podman
+    ```bash
+    podman run -d -p 8080:8080 --name plagiarism-app plagiarism:v1

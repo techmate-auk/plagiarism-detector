@@ -1,18 +1,11 @@
-################ Stage 1: Build ################
+FROM golang:1.23-alpine
 
-FROM golang:1.22 AS builder
-
-WORKDIR /go/src/app
+WORKDIR /
 
 COPY . .
 
-RUN go mod download && go mod verify
+RUN go mod download
 
-RUN go build -o /go/bin/app .
-
-################ Stage 2: Runtime  ################
-FROM gcr.io/distroless/static-debian12
-
-COPY --from=builder /go/bin/app /
-
-CMD ["/app"]
+RUN go build -o app .
+EXPOSE 8080
+CMD [ "./app" ]
