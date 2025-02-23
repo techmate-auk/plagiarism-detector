@@ -42,3 +42,7 @@ Plagiarim Detector will help you to detect copy content of your manuscript or do
 2. Run the image using podman
     ```bash
     podman run -d -p 8080:8080 --name plagiarism-app plagiarism:v1
+
+3. Test container is running or not
+    ```bash
+    podman ps
