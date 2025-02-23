@@ -68,6 +68,7 @@ func detectPlagiarism(query string, corpus []string, n int, threshold float64) [
 	return results
 }
 
+// main function
 func main() {
 	r := gin.Default()
 
