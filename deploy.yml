@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: plagiarism-detector
+  labels:
+    app: checker-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: checker-app
+  template:
+    metadata:
+      labels:
+        app: checker-app
+    spec:
+      automountServiceAccountToken: true
+      containers:
+      - name: plagiarism-checker
+        image: docker.io/ausafumarkhan/plagiarism-detector:v2
+        ports:
+        - name: web-app 
+          containerPort: 8089
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: plagiarism-detector-svc
+spec:
+  selector:
+    app: checker-app
+  ports:
+    - name: http
+      protocol: TCP
+      port: 8080
+      targetPort: 8089
+---
