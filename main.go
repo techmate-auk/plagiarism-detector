@@ -1,3 +1,4 @@
+// Start of project
 package main
 
 import (
