@@ -1,4 +1,4 @@
-# Stage 1: Build
+# Stage 1: Build stage
 FROM golang:1.23.6-alpine3.21 AS builder
 
 # Set the working directory inside the container
